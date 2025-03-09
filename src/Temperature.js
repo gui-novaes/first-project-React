@@ -1,4 +1,5 @@
 import { useState } from "react";
+import useLogTemperature from "./hooks/useLogTemperaure";
 
 
 function TemperatureConverter() {
@@ -13,7 +14,7 @@ function TemperatureConverter() {
             <div className="card">
                 <label>
                     Celsius
-                    <input value={celsius} onChange={e => setCelsius(Number(e.target.value))} />
+                    <input value={celsius} onChange={e => setCelsius(Number(e.target.value))}/>
                     °C
                 </label>
             </div>
@@ -28,11 +29,11 @@ function TemperatureConverter() {
             <span>Farenheit: {resultFahrenheit} °F </span>
             <br></br>
             <br></br>
-            <span>Kelvin:  {resultKelvin} K </span>
+            <span onClick={useLogTemperature(celsius)}>Kelvin:  {resultKelvin} K </span>
             </div>
         </>
 
-    )
+    );
 }
 
 export default TemperatureConverter;

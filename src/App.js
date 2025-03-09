@@ -1,31 +1,47 @@
 import logo from './logo.svg';
 import './App.css';
-import React, { useState } from 'react';
+import React from 'react';
 import Botao from './Botao';
 import Calculator from './Calculator';
 import Temperature from './Temperature';
 import WordCounter from './WordCounter';
-import useLog from './hooks/useLog';
+import Secao from './Secao';
+// import useLog from './hooks/useLog';
 
 function App() {
   // const botao = <button></button>  // essa constante está recebendo uma expressão JSX, pq está retornando HTML
 
-  const [nome, setNome] = useState('Kim');
-  const assinado = useLog(nome);
-  console.log('app', assinado);
+  // const [nome, setNome] = useState('Kim');
+  // const assinado = useLog(nome);
+  // console.log('app', assinado);
+
+  const handleClick = (valor) => {
+    alert(valor);
+  }
+
+  const handleClickTipoDois = (valor) => {
+    alert(valor + ' ... Att, Gui');
+  }
 
   return (
     <>
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
+          <Secao></Secao>
 
-          <button onClick={() => setNome("Gui Novaes")}>Sobrenome</button>
+          {/* <button onClick={() => setNome("Gui Novaes")}>Sobrenome</button> */}
 
           <p>
             Meu primeiro projeto
           </p>
-          <Botao></Botao>
+
+          <Botao onAcaoDeClique={handleClick} number="1">Botão 1</Botao>
+          <Botao onAcaoDeClique={handleClickTipoDois} number="2">Botão 2</Botao>
+          <Botao onAcaoDeClique={handleClick} number="3">Botão 3</Botao>
+          <Botao onAcaoDeClique={handleClickTipoDois} number="4">Botão 4</Botao>
+          <Botao onAcaoDeClique={handleClick} number="5">Botão 5</Botao>
+          
           <a
             className="App-link"
             href="https://reactjs.org"
