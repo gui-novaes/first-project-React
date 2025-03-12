@@ -1,4 +1,4 @@
-import Botao from "./Botao";
+import BotaoAtom from "../Atoms/Botao";
 
 const Secao = (props) => {
 const handleClick = (valor) => {
@@ -8,7 +8,7 @@ const handleClick = (valor) => {
     return (
         <>
             <div>
-                <Botao onAcaoDeClique={handleClick} number="777">Botão na seção</Botao>
+                <BotaoAtom onAcaoDeClique={handleClick} number="777">Botão na seção</BotaoAtom>
             </div>
         </>
     );

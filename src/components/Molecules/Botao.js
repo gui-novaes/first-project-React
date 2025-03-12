@@ -1,5 +1,5 @@
 // import { useState } from "react";
-import useLog from "./hooks/useLog";
+import BotaoAtom from "./Atoms/Botao";
 
 const Botao = (props) => {
     console.log('props', props);
@@ -21,8 +21,7 @@ const Botao = (props) => {
 
     return (
     <>
-        <button onClick={() => props.onAcaoDeClique(`Clicou no ${props.number}`)}>{props.children}</button>
-        {/* <button onClick={(handleFrase)}>Muda Frase</button> */}
+        <BotaoAtom></BotaoAtom>
     </>
 );
 };
