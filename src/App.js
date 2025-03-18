@@ -6,15 +6,9 @@ import Calculator from '../src/components/Templates/Calculator';
 import Temperature from '../src/components/Templates/Temperature';
 import WordCounter from '../src/components/Templates/WordCounter';
 import Secao from './components/Organisms/Secao';
-// import useLog from './hooks/useLog';
+import Test from './components/Atoms/Test.tsx';
 
 function App() {
-  // const botao = <button></button>  // essa constante está recebendo uma expressão JSX, pq está retornando HTML
-
-  // const [nome, setNome] = useState('Kim');
-  // const assinado = useLog(nome);
-  // console.log('app', assinado);
-
   const handleClick = (valor) => {
     alert(valor);
   }
@@ -35,6 +29,10 @@ function App() {
           <p>
             Meu primeiro projeto
           </p>
+
+          <br/>
+          <div> <Test></Test> </div>
+          <br/>
 
           <Botao onAcaoDeClique={handleClick} number="1">Botão 1</Botao>
           <Botao onAcaoDeClique={handleClickTipoDois} number="2">Botão 2</Botao>
