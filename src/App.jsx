@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
-import Botao from '../src/components/Atoms/Botao';
-import Calculator from '../src/components/Templates/Calculator';
-import Temperature from '../src/components/Templates/Temperature';
-import WordCounter from '../src/components/Templates/WordCounter';
-import Secao from './components/Organisms/Secao';
+import Botao from './components/Atoms/Botao.jsx';
+import Calculator from './components/Templates/Calculator.jsx';
+import Temperature from './components/Templates/Temperature.jsx';
+import WordCounter from './components/Templates/WordCounter.jsx';
+import Secao from './components/Organisms/Secao.jsx';
 import Test from './components/Atoms/Test.tsx';
 
 function App() {
